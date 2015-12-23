@@ -1,3 +1,7 @@
+// Calvin Vuong
+// APCS1 pd5
+// HW53
+// 2015-12-23
 
 import java.util.ArrayList;
 
