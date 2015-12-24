@@ -21,7 +21,6 @@ public class MySorts{
 	return retAL;
     }
 
-
     //randomly rearrange elements of an ArrayList
     public static void shuffle( ArrayList al ) {
 	int randomIndex;
@@ -115,11 +114,26 @@ public class MySorts{
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
     // employs helper function isSorted()
-    public static void bogoSort(ArrayList<Comparable> data){
+    public static void bogoSortV(ArrayList<Comparable> data){
 	while ( !(isSorted(data)) ){ //while data not sorted
 	    shuffle(data); //keep shuffling
 	}
-    }
+    } //end bogoSortV
+
+    // ArrayList-returning bogoSort
+    // postcondition: order of input ArrayList's elements unchanged
+    //                Returns sorted copy of input ArrayList.
+    // uses helper function isSorted()
+    public static ArrayList<Comparable> bogoSort(ArrayList<Comparable> input){
+	//copy input into a new ArrayList to prevent aliasing problems
+	ArrayList newList = new ArrayList<Comparable>();
+	for (Comparable c : input){
+	    newList.add(c);
+	}
+
+	bogoSortV(newList); 
+	return newList; //return sorted version
+    }//end bogoSort
 
     // helper function isSorted(ArrayList)
     // returns true if ArrayList is sorted

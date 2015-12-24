@@ -22,9 +22,9 @@ public class Driver{
 	System.out.println("");
 
 	System.out.println("Testing bogo sort: ");
-	ArrayList gretchen = MySorts.populate( 50, 1, 500);
+	ArrayList gretchen = MySorts.populate( 12, 1, 500);
 	System.out.println("ArrayList cadie before sorting:\n" + gretchen);
-	MySorts.bubbleSortV(gretchen);
+	MySorts.bogoSortV(gretchen);
 	System.out.println("ArrayList cadie after sorting:\n" + gretchen);
 	System.out.println("");
 
